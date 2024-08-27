@@ -1,82 +1,82 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo total da largura e altura de um elemento */
 }
 
-html{
-    font-size: 62.5%;
+html {
+    font-size: 62.5%; /* Define o tamanho da fonte para 62.5% do tamanho padrão, facilitando o uso de rem */
 }
 
 body {
-    color: #fff;
-    font-family: "Catamaran", sans-serif;
-    font-size: 1.6rem;
+    color: #fff; /* Define a cor do texto do corpo como branco */
+    font-family: "Catamaran", sans-serif; /* Define a família da fonte do corpo */
+    font-size: 1.6rem; /* Define o tamanho da fonte do corpo como 1.6rem (16px se baseando no tamanho de fonte do html) */
 }
 
 h2 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    margin: 1rem;
+    font-size: 4.5rem; /* Define o tamanho da fonte para elementos h2 */
+    font-weight: 300; /* Define a espessura da fonte como leve para elementos h2 */
+    margin: 1rem; /* Define uma margem ao redor de elementos h2 */
 }
 
 p {
-    font-size: 2rem;
+    font-size: 2rem; /* Define o tamanho da fonte para parágrafos */
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 20rem;
-    grid-gap: .5rem;    
-    padding: 1rem;    
+    display: grid; /* Utiliza o Grid Layout para o container */
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanhos iguais (frações) */
+    grid-auto-rows: 20rem; /* Define a altura automática das linhas para 20rem */
+    grid-gap: .5rem; /* Define o espaço entre os itens do grid */
+    padding: 1rem; /* Adiciona padding dentro do container */
 }
 
 .box {
-    cursor: pointer;    
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: opacity 1s ease-in, transform 1s;
+    cursor: pointer; /* Altera o cursor para indicar que o item é clicável */
+    background-size: cover; /* Define a imagem de fundo para cobrir todo o elemento */
+    background-attachment: fixed; /* Fixa o fundo durante o scroll */
+    background-position: center; /* Centraliza a posição da imagem de fundo */
+    border-radius: 5px; /* Arredonda os cantos da borda em 5px */
+    display: flex; /* Utiliza Flexbox para o layout dos itens internos */
+    flex-direction: column; /* Alinha os itens flexíveis em uma coluna */
+    align-items: center; /* Centraliza os itens flexíveis horizontalmente */
+    justify-content: center; /* Centraliza os itens flexíveis verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    transition: opacity 1s ease-in, transform 1s; /* Define transições suaves para opacidade e transformação */
 }
 
 .box:hover {
-    opacity: 0.85;
-    transform: scale(0.98);
+    opacity: 0.85; /* Reduz a opacidade ao passar o mouse sobre o elemento */
+    transform: scale(0.98); /* Reduz levemente o tamanho do elemento ao passar o mouse sobre ele */
 }
 
 .span-2 {
-     grid-column: span 2;
-     grid-row: span 2;
- }
+    grid-column: span 2; /* Faz com que o elemento ocupe duas colunas no grid */
+    grid-row: span 2; /* Faz com que o elemento ocupe duas linhas no grid */
+}
 
 .bg1 {
     background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0.1)),
-    url(../images/bg1.jpg);
+     url(../images/bg1.jpg); /* Define um gradiente linear sobre uma imagem de fundo */
 }
 
 .bg2 {
-    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0.1)),
-    url(../images/bg2.jpg);
- }
+    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0.1)), 
+    url(../images/bg2.jpg); /* Define um gradiente linear sobre uma imagem de fundo */
+}
 
- .bg3 {
+.bg3 {
+    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0.1)), 
+    url(../images/bg3.jpg); /* Define um gradiente linear sobre uma imagem de fundo */
+}
+.bg4 {
     background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0.1)),
-    url(../images/bg3.jpg);
- }
- .bg4 {
-    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0.1)),
-    url(../images/bg4.jpg);
- }
+     url(../images/bg4.jpg); /* Define um gradiente linear sobre uma imagem de fundo */
+}
 
-@media(width <= 1000px){
+@media(width <= 1000px) {
     .container {
-         grid-template-columns: repeat(2, 1fr);   
+        grid-template-columns: repeat(2, 1fr); /* Muda o layout para duas colunas de tamanho igual em telas menores que 1000px */
     }
 }
