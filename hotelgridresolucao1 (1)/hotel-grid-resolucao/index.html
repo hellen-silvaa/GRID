@@ -1,73 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"> <!-- Declara o tipo de documento como HTML5 e define o idioma da página como português do Brasil. -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a configuração inicial do zoom da página, garantindo que ela seja responsiva em dispositivos móveis. -->
+    <title>Grid</title> <!-- Define o título da página que aparece na aba do navegador. -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Inicia a conexão antecipada com o domínio do Google Fonts para melhorar a performance de carregamento de fontes. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconecta ao domínio do Google Fonts com CORS (Cross-Origin Resource Sharing) habilitado. -->
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap" rel="stylesheet"> <!-- Importa a fonte "Catamaran" com peso 500 do Google Fonts para ser usada no site. -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Importa o Font Awesome para usar ícones no site, especificando a integridade e a política de referrer para segurança. -->
 
-
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css"> <!-- Linka o arquivo CSS local "style.css" para aplicar estilos personalizados ao site. -->
 </head>
 
 <body>
-    <div class="container">
-        <div class="box bg1 span-2">
-            <h2>08 Restaurantes</h2>
+    <div class="container"> <!-- Define um contêiner principal com classe "container" que usará Grid Layout para organizar os elementos internos. -->
+        <div class="box bg1 span-2"> <!-- Cria uma caixa (box) que possui duas classes de estilo (bg1 e span-2) para definir o fundo e fazer o elemento ocupar duas colunas e duas linhas no grid. -->
+            <h2>08 Restaurantes</h2> <!-- Exibe um título dentro da caixa indicando "08 Restaurantes". -->
         </div>
-        <div class="box bg2">
-            <h2><i class="fa-solid fa-spa"></i></h2>
-            <p>Spa</p>
+        <div class="box bg2"> <!-- Cria uma caixa com uma classe de fundo "bg2". -->
+            <h2><i class="fa-solid fa-spa"></i></h2> <!-- Insere um ícone de spa utilizando o Font Awesome. -->
+            <p>Spa</p> <!-- Exibe uma descrição abaixo do ícone com a palavra "Spa". -->
         </div>
-        <div class="box bg3">
-            <h2><i class="fa-solid fa-water-ladder"></i></h2>
-            <p>08 piscinas</p>
+        <div class="box bg3"> <!-- Cria uma caixa com uma classe de fundo "bg3". -->
+            <h2><i class="fa-solid fa-water-ladder"></i></h2> <!-- Insere um ícone de piscina utilizando o Font Awesome. -->
+            <p>08 piscinas</p> <!-- Exibe uma descrição abaixo do ícone indicando "08 piscinas". -->
         </div>
-        <div class="box bg4">
-            <h2>36 &deg;</h2>
-            <p>Temperatura</p>
+        <div class="box bg4"> <!-- Cria uma caixa com uma classe de fundo "bg4". -->
+            <h2>36 &deg;</h2> <!-- Exibe um título indicando a temperatura "36°". -->
+            <p>Temperatura</p> <!-- Exibe uma descrição abaixo do título com a palavra "Temperatura". -->
         </div>
-        <div class="box bg1">
-            <h2><i class="fas fa-bed"></i></h2>
-            <p>Relaxe</p>
+        <div class="box bg1"> <!-- Outra caixa com a classe de fundo "bg1". -->
+            <h2><i class="fas fa-bed"></i></h2> <!-- Insere um ícone de cama utilizando o Font Awesome para sugerir relaxamento. -->
+            <p>Relaxe</p> <!-- Exibe uma descrição abaixo do ícone com a palavra "Relaxe". -->
         </div>
-        <div class="box bg2 span-2">
-            <h2>10</h2>
-            <p>Bares Temáticos</p>
+        <div class="box bg2 span-2"> <!-- Cria uma caixa que ocupa duas colunas no grid com a classe "span-2". -->
+            <h2>10</h2> <!-- Exibe um título indicando "10". -->
+            <p>Bares Temáticos</p> <!-- Exibe uma descrição abaixo do título indicando "Bares Temáticos". -->
         </div>
-        <div class="box bg4">
-            <h2>100</h2>
-            <p>Chalés</p>
+        <div class="box bg4"> <!-- Caixa com classe de fundo "bg4". -->
+            <h2>100</h2> <!-- Exibe um título indicando "100". -->
+            <p>Chalés</p> <!-- Exibe uma descrição abaixo do título com a palavra "Chalés". -->
         </div>
-        <div class="box bg3">
-            <h2><i class="fa-solid fa-champagne-glasses"></i></h2>
-            <p>Drinks</p>
+        <div class="box bg3"> <!-- Outra caixa com a classe de fundo "bg3". -->
+            <h2><i class="fa-solid fa-champagne-glasses"></i></h2> <!-- Insere um ícone de taças de champagne utilizando o Font Awesome. -->
+            <p>Drinks</p> <!-- Exibe uma descrição abaixo do ícone com a palavra "Drinks". -->
         </div>
-        <div class="box bg2 span-2">
-            <h2>130</h2>
-            <p>Apartamentos</p>
+        <div class="box bg2 span-2"> <!-- Caixa que ocupa duas colunas no grid com a classe "span-2". -->
+            <h2>130</h2> <!-- Exibe um título indicando "130". -->
+            <p>Apartamentos</p> <!-- Exibe uma descrição abaixo do título com a palavra "Apartamentos". -->
         </div>
-        <div class="box bg1 span-2">
-            <h2><i class="fa-solid fa-lock"></i></h2>
-            <p>Privacidade</p>
+        <div class="box bg1 span-2"> <!-- Caixa que ocupa duas colunas e duas linhas no grid com as classes "bg1" e "span-2". -->
+            <h2><i class="fa-solid fa-lock"></i></h2> <!-- Insere um ícone de cadeado utilizando o Font Awesome para sugerir privacidade. -->
+            <p>Privacidade</p> <!-- Exibe uma descrição abaixo do ícone com a palavra "Privacidade". -->
         </div>
-        <div class="box bg3">
-            <h2><i class="fas fa-dumbbell"></i></h2>
-            <p>Academia</p>
+        <div class="box bg3"> <!-- Outra caixa com a classe de fundo "bg3". -->
+            <h2><i class="fas fa-dumbbell"></i></h2> <!-- Insere um ícone de haltere utilizando o Font Awesome para indicar academia. -->
+            <p>Academia</p> <!-- Exibe uma descrição abaixo do ícone com a palavra "Academia". -->
         </div>
-        <div class="box bg4">
-            <h2>100%</h2>
-            <p>Sofisticação</p>
+        <div class="box bg4"> <!-- Caixa com classe de fundo "bg4". -->
+            <h2>100%</h2> <!-- Exibe um título indicando "100%". -->
+            <p>Sofisticação</p> <!-- Exibe uma descrição abaixo do título com a palavra "Sofisticação". -->
         </div>
-    </div>
+    </div> <!-- Fecha o contêiner principal. -->
 </body>
 
 </html>
