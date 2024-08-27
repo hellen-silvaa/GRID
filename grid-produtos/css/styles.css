@@ -1,122 +1,133 @@
+/* Reseta margens, preenchimentos e define box-sizing para border-box em todos os elementos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove margens de todos os elementos */
+    padding: 0; /* Remove preenchimentos de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos na largura e altura totais dos elementos */
 }
 
+/* Define variáveis CSS que podem ser reutilizadas em todo o documento */
 :root {
-    --color-light-700: #ffffff;
-    --color-light-500: #f9f9f9;
-    --color-light-300: #cccccc;
-    --gradient: linear-gradient(45deg,
-    hsl(240deg 19% 17%) 0%,
-    hsl(284deg 16% 21%) 9%,
-    hsl(326deg 17% 26%) 33%,
-    hsl(348deg 19% 33%) 62%,
-    hsl(7deg 19% 38%) 80%,
-    hsl(21deg 22% 41%) 90%,
-    hsl(35deg 20% 44%) 96%,
-    hsl(55deg 15% 47%) 100%);
+    --color-light-700: #ffffff; /* Cor branca, usada para o fundo do cabeçalho e rodapé */
+    --color-light-500: #f9f9f9; /* Cor cinza claro, usada para o fundo do corpo */
+    --color-light-300: #cccccc; /* Cor cinza mais escuro, usada para as bordas */
+    --gradient: linear-gradient(45deg, /* Define um gradiente linear de várias cores */
+    hsl(240deg 19% 17%) 0%, /* Cor escura */
+    hsl(284deg 16% 21%) 9%, /* Cor roxa escura */
+    hsl(326deg 17% 26%) 33%, /* Cor laranja escura */
+    hsl(348deg 19% 33%) 62%, /* Cor vermelha escura */
+    hsl(7deg 19% 38%) 80%, /* Cor vermelho mais claro */
+    hsl(21deg 22% 41%) 90%, /* Cor rosa claro */
+    hsl(35deg 20% 44%) 96%, /* Cor rosa mais claro */
+    hsl(55deg 15% 47%) 100%); /* Cor rosa muito claro */
 }
 
+/* Define o tamanho da fonte base do documento */
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; /* Define o tamanho da fonte base como 62.5% do tamanho padrão, facilitando o uso de rems (1rem = 10px) */
 }
 
+/* Define estilos para o corpo da página */
 body {
-    font-size: 1.6rem;
-    font-family: calibri;
-    background-color: var(--color-light-500);
+    font-size: 1.6rem; /* Define o tamanho da fonte do corpo como 1.6rem (16px) */
+    font-family: calibri; /* Define a fonte do corpo como Calibri */
+    background-color: var(--color-light-500); /* Define a cor de fundo do corpo com a variável definida no :root */
 }
 
+/* Define estilos para o cabeçalho */
 header {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--color-light-700);
-    border: 1px solid var(--color-light-300);
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 2rem; /* Adiciona 2rem de preenchimento ao redor do conteúdo */
+    background-color: var(--color-light-700); /* Define a cor de fundo do cabeçalho com a variável definida no :root */
+    border: 1px solid var(--color-light-300); /* Adiciona uma borda sólida de 1px com a cor cinza mais escura */
 }
 
+/* Define estilos para a área principal */
 main {
-    max-width: 132rem;
-    margin: auto;
+    max-width: 132rem; /* Define a largura máxima da área principal */
+    margin: auto; /* Centraliza a área principal horizontalmente */
 }
 
+/* Define estilos para a grade de produtos */
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(auto, 1fr));
-    gap: 1rem;
-    padding: 2rem;
+    display: grid; /* Define um layout de grid */
+    grid-template-columns: repeat(4, minmax(auto, 1fr)); /* Cria 4 colunas com largura mínima automática e máxima de 1fração */
+    gap: 1rem; /* Define um espaço de 1rem entre os itens da grade */
+    padding: 2rem; /* Adiciona 2rem de preenchimento ao redor dos itens da grade */
 }
 
+/* Define estilos para os itens da grade de produtos */
 .product-item {
-    background-image: var(--gradient) ;
-    color: var(--color-light-700);
-    border-radius: 5px;
-    padding: 2rem 1rem;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    background-image: var(--gradient); /* Define a imagem de fundo com o gradiente definido no :root */
+    color: var(--color-light-700); /* Define a cor do texto com a variável definida no :root */
+    border-radius: 5px; /* Adiciona bordas arredondadas de 5px aos itens */
+    padding: 2rem 1rem; /* Adiciona 2rem de preenchimento vertical e 1rem horizontal aos itens */
+    text-align: center; /* Alinha o texto ao centro */
+    display: flex; /* Define um layout flexível */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+    flex-direction: column; /* Organiza os itens na vertical */
+    justify-content: center; /* Alinha os itens verticalmente ao centro */
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse o limite do item */
 }
 
+/* Define estilos para as imagens dentro dos itens da grade de produtos */
 .product-item img {
-    max-width: 70%;
-    margin-bottom: 1rem;
-    transition: .5s;
+    max-width: 70%; /* Define a largura máxima da imagem como 70% do tamanho do contêiner */
+    margin-bottom: 1rem; /* Adiciona 1rem de margem abaixo da imagem */
+    transition: .5s; /* Adiciona uma transição suave de 0.5 segundos para alterações */
 }
 
+/* Define o estilo para as imagens ao passar o mouse sobre elas */
 .product-item img:hover {
-    scale: 1.2;
-    cursor: pointer;
+    scale: 1.2; /* Aumenta o tamanho da imagem em 20% ao passar o mouse */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
 }
 
+/* Define estilos para os parágrafos dentro dos itens da grade de produtos */
 .product-item p {
-    font-weight: 600;
-    font-size: 2rem;
+    font-weight: 600; /* Define o peso da fonte como 600 (negrito) */
+    font-size: 2rem; /* Define o tamanho da fonte como 2rem (20px) */
 }
 
+/* Define estilos para os elementos div dentro dos itens da grade de produtos */
 .product-item div {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+    width: 100%; /* Define a largura do div como 100% do contêiner pai */
+    display: flex; /* Define um layout flexível */
+    justify-content: space-evenly; /* Distribui o espaço entre os itens igualmente */
 }
 
+/* Define estilos para itens da grade que ocupam duas linhas */
 .span-row {
-    grid-row: span 2;
+    grid-row: span 2; /* Faz com que o item ocupe duas linhas na grade */
 }
 
+/* Define estilos para itens da grade que ocupam duas colunas */
 .span-col {
-    grid-column: span 2;
+    grid-column: span 2; /* Faz com que o item ocupe duas colunas na grade */
 }
 
-
-
-
+/* Define estilos para o rodapé */
 footer {
-    text-align: center;    
-    background-color: var(--color-light-700);
-    border-top: 1px solid var(--color-light-300);
-    padding: 2rem;
-    margin-top: 2rem;
+    text-align: center; /* Alinha o texto ao centro */
+    background-color: var(--color-light-700); /* Define a cor de fundo do rodapé com a variável definida no :root */
+    border-top: 1px solid var(--color-light-300); /* Adiciona uma borda superior sólida de 1px com a cor cinza mais escura */
+    padding: 2rem; /* Adiciona 2rem de preenchimento ao redor do conteúdo */
+    margin-top: 2rem; /* Adiciona 2rem de margem superior para separar o rodapé do conteúdo acima */
 }
 
+/* Define estilos responsivos para telas com largura de até 1024px */
 @media(width <= 1024px){
-
     .product-grid {
-        grid-template-columns: repeat(2, minmax(auto, 1fr));     
+        grid-template-columns: repeat(2, minmax(auto, 1fr)); /* Muda para 2 colunas na grade de produtos */
     }
     .span-col {
-        grid-column: span 1;
+        grid-column: span 1; /* Faz com que o item ocupe apenas uma coluna na grade */
     }
 }
 
-
+/* Define estilos responsivos para telas com largura de até 650px */
 @media(width <= 650px){
     .product-grid {
-        grid-template-columns: 1fr;     
+        grid-template-columns: 1fr; /* Muda para 1 coluna na grade de produtos */
     }
-
 }
